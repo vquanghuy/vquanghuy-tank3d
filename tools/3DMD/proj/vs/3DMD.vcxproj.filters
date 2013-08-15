@@ -14,16 +14,5 @@
     <Filter Include="generated">
       <UniqueIdentifier>{f39c62f3-b70e-461f-a691-088edbdd9db6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="data">
-      <UniqueIdentifier>{158323ed-843d-4964-aa65-00bb416a37b9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="data\forms">
-      <UniqueIdentifier>{6b4208e0-e47c-46d1-a060-67f1c1c3c3ae}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\data\forms\mainwindow.ui">
-      <Filter>data\forms</Filter>
-    </None>
   </ItemGroup>
 </Project>
