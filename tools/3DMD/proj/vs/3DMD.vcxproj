@@ -38,15 +38,36 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildBeforeTargets>
+    </CustomBuildBeforeTargets>
+    <OutDir>$(ProjectDir)../../bin/</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)../../libs/Qt5.1.0/include;$(ProjectDir)../../libs/Qt5.1.0/include/QtCore;$(ProjectDir)../../libs/Qt5.1.0/include/QtGui;$(ProjectDir)../../libs/Qt5.1.0/include/QtWidgets;$(ProjectDir)../../src/generated</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);QT_THREAD_SUPPORT;QT_CORE_LIB;QT_GUI_LIB</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)../../libs/Qt5.1.0/lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Qt5AxBase.lib;Qt5AxBased.lib;Qt5AxContainer.lib;Qt5AxContainerd.lib;Qt5AxServer.lib;Qt5AxServerd.lib;Qt5Bootstrap.lib;Qt5CLucene.lib;Qt5CLucened.lib;Qt5Concurrent.lib;Qt5Concurrentd.lib;Qt5Core.lib;Qt5Cored.lib;Qt5Declarative.lib;Qt5Declaratived.lib;Qt5Designer.lib;Qt5DesignerComponents.lib;Qt5DesignerComponentsd.lib;Qt5Designerd.lib;Qt5Gui.lib;Qt5Guid.lib;Qt5Help.lib;Qt5Helpd.lib;Qt5Multimedia.lib;Qt5Multimediad.lib;Qt5MultimediaQuick_p.lib;Qt5MultimediaQuick_pd.lib;Qt5MultimediaWidgets.lib;Qt5MultimediaWidgetsd.lib;Qt5Network.lib;Qt5Networkd.lib;Qt5OpenGL.lib;Qt5OpenGLd.lib;Qt5OpenGLExtensions.lib;Qt5OpenGLExtensionsd.lib;Qt5PlatformSupport.lib;Qt5PlatformSupportd.lib;Qt5PrintSupport.lib;Qt5PrintSupportd.lib;Qt5Qml.lib;Qt5Qmld.lib;Qt5QmlDevTools.lib;Qt5Quick.lib;Qt5Quickd.lib;Qt5QuickParticles.lib;Qt5QuickParticlesd.lib;Qt5QuickTest.lib;Qt5QuickTestd.lib;Qt5Script.lib;Qt5Scriptd.lib;Qt5ScriptTools.lib;Qt5ScriptToolsd.lib;Qt5Sensors.lib;Qt5Sensorsd.lib;Qt5SerialPort.lib;Qt5SerialPortd.lib;Qt5Sql.lib;Qt5Sqld.lib;Qt5Svg.lib;Qt5Svgd.lib;Qt5Test.lib;Qt5Testd.lib;Qt5UiTools.lib;Qt5UiToolsd.lib;Qt5V8.lib;Qt5V8d.lib;Qt5WebKit.lib;Qt5WebKitd.lib;Qt5WebKitWidgets.lib;Qt5WebKitWidgetsd.lib;Qt5Widgets.lib;Qt5Widgetsd.lib;Qt5Xml.lib;Qt5Xmld.lib;Qt5XmlPatterns.lib;Qt5XmlPatternsd.lib;qtmain.lib;qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)\3DMD.exe</OutputFile>
     </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Inputs>
+      </Inputs>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -62,6 +83,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\mainwindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\generated\ui_mainwindow.h" />
+    <ClInclude Include="..\..\src\mainwindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\data\forms\mainwindow.ui">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

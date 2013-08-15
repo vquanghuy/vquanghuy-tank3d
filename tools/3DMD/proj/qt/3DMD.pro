@@ -12,8 +12,12 @@ TARGET = 3DMD
 TEMPLATE = app
 
 
-SOURCES +=
+SOURCES += \
+    ../../src/mainwindow.cpp \
+    ../../src/main.cpp
 
-HEADERS  +=
+HEADERS  += \
+    ../../src/mainwindow.h
 
-FORMS    +=
+FORMS    += \
+    ../../data/forms/mainwindow.ui
