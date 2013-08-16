@@ -3,6 +3,9 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\mainwindow.cpp" />
+    <ClCompile Include="..\..\src\generated\moc_mainwindow.cpp">
+      <Filter>generated</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\mainwindow.h" />
