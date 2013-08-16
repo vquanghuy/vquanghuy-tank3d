@@ -6,4 +6,4 @@ BEFORE BEGIN
 - Set system variable
 	$(QTDIR) - Qt directory (ex: C:\Qt\Qt5.1.0)
 - Copy all *.dll file from "$(QTDIR)\5.1.0\msvc2012\bin\" to "bin" folder
-- Run "data/makedata.bat" to generate *.h
+- Run "script/generate_ui.bat" to generate ui file
