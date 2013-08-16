@@ -6,7 +6,7 @@
  
 QPaintEngine * QIrrlichtWidget::paintEngine() const
 {
-    qDebug() << "QIrrlichtWidget::paintEngine";
+    //qDebug() << "QIrrlichtWidget::paintEngine";
  
     return 0;
 }
@@ -35,7 +35,8 @@ void QIrrlichtWidget::resizeEvent( QResizeEvent *event )
  
 void QIrrlichtWidget::paintEvent( QPaintEvent *event )
 {
-    qDebug() << "QIrrlichtWidget::paintEvent";
+	//remove spam log
+    //qDebug() << "QIrrlichtWidget::paintEvent";
  
     emit updateIrrlichtQuery(m_IrrDevice);
  

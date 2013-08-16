@@ -19,3 +19,21 @@ MainWindow::~MainWindow()
 	delete m_displayWidget;
     delete ui;
 }
+
+/* ==========================
+	HANDLE EVENT FORM MAIN WINDOW
+=========================== */
+void MainWindow::on_actionOpen_triggered()
+{
+	
+}
+
+void MainWindow::on_actionExit_triggered()
+{
+	exit(0);
+}
+
+void MainWindow::on_actionAdd_Model_triggered()
+{
+	
+}

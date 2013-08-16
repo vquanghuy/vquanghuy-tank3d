@@ -19,6 +19,14 @@ public:
 private:
     Ui::MainWindow		*ui;
 	QIrrlichtWidget		*m_displayWidget;
+
+	/* ==========================
+	HANDLE EVENT FORM MAIN WINDOW
+	=========================== */
+private slots:
+	void on_actionOpen_triggered();
+	void on_actionExit_triggered();
+	void on_actionAdd_Model_triggered();
 };
 
 #endif // MAINWINDOW_H
