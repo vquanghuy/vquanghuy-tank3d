@@ -89,11 +89,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\custom_widget\QIrrlichtWidget.cpp" />
     <ClCompile Include="..\..\src\generated\moc_mainwindow.cpp" />
+    <ClCompile Include="..\..\src\generated\moc_QIrrlichtWidget.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\mainwindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\custom_widget\QIrrlichtWidget.h" />
     <ClInclude Include="..\..\src\generated\ui_mainwindow.h" />
     <ClInclude Include="..\..\src\mainwindow.h" />
   </ItemGroup>

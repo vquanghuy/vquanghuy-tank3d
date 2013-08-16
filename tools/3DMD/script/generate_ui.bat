@@ -14,3 +14,4 @@ REM =================================
 REM ===== GENERATE moc_* FILE =======
 REM =================================
 %QTDIR%\5.1.0\msvc2012\bin\moc.exe "%SRC_FOLDER%\mainwindow.h" -o "%SRC_FOLDER%\generated\moc_mainwindow.cpp"
+%QTDIR%\5.1.0\msvc2012\bin\moc.exe "%SRC_FOLDER%\custom_widget\QIrrlichtWidget.h" -o "%SRC_FOLDER%\generated\moc_QIrrlichtWidget.cpp"

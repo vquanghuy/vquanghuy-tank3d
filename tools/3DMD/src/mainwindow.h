@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "custom_widget\QIrrlichtWidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -16,7 +17,8 @@ public:
     ~MainWindow();
     
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow		*ui;
+	QIrrlichtWidget		*m_displayWidget;
 };
 
 #endif // MAINWINDOW_H
