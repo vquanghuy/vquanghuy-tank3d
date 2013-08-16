@@ -6,16 +6,28 @@
     <ClCompile Include="..\..\src\generated\moc_mainwindow.cpp">
       <Filter>generated</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\custom_widget\QIrrlichtWidget.cpp">
+      <Filter>custom_widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\generated\moc_QIrrlichtWidget.cpp">
+      <Filter>generated</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\mainwindow.h" />
     <ClInclude Include="..\..\src\generated\ui_mainwindow.h">
       <Filter>generated</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\custom_widget\QIrrlichtWidget.h">
+      <Filter>custom_widget</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="generated">
       <UniqueIdentifier>{f39c62f3-b70e-461f-a691-088edbdd9db6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="custom_widget">
+      <UniqueIdentifier>{193b4fdc-a81f-4853-aa5d-ab7ad93216a0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
