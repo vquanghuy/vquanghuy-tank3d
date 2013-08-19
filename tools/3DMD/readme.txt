@@ -7,3 +7,6 @@ BEFORE BEGIN
 	$(QTDIR) - Qt directory (ex: C:\Qt\Qt5.1.0)
 - Copy all *.dll file from "$(QTDIR)\5.1.0\msvc2012\bin\" to "bin" folder
 - Run "script/generate_ui.bat" to generate ui file
+
+IMPORTANT NOTE
+- Run "script/generate_ui.bat" right after modify GUI or use "connect" command

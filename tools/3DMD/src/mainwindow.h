@@ -27,6 +27,10 @@ private slots:
 	void on_actionOpen_triggered();
 	void on_actionExit_triggered();
 	void on_actionAdd_Model_triggered();
+
+	void on_mousePress( QMouseEvent *event );
+	void on_mouseMove( QMouseEvent *event );
+	void on_mouseRelease( QMouseEvent *event );
 };
 
 #endif // MAINWINDOW_H

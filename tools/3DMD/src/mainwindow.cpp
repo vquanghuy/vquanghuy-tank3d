@@ -12,6 +12,11 @@ MainWindow::MainWindow(QWidget *parent) :
 	m_displayWidget->initialize();
 
 	m_displayWidget->setGeometry(0, 0, ui->mainDisplayWidget->width(), ui->mainDisplayWidget->height());
+
+	// connect mouse event
+	connect(m_displayWidget, SIGNAL(mousePress( QMouseEvent *)), this, SLOT(on_mousePress( QMouseEvent *)));
+	connect(m_displayWidget, SIGNAL(mouseMove( QMouseEvent *)), this, SLOT(on_mouseMove( QMouseEvent *)));
+	connect(m_displayWidget, SIGNAL(mouseRelease( QMouseEvent *)), this, SLOT(on_mouseRelease( QMouseEvent *)));
 }
 
 MainWindow::~MainWindow()
@@ -34,6 +39,21 @@ void MainWindow::on_actionExit_triggered()
 }
 
 void MainWindow::on_actionAdd_Model_triggered()
+{
+	
+}
+
+void MainWindow::on_mousePress( QMouseEvent *event )
+{
+	
+}
+
+void MainWindow::on_mouseMove( QMouseEvent *event )
+{
+	
+}
+
+void MainWindow::on_mouseRelease( QMouseEvent *event )
 {
 	
 }

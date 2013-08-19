@@ -50,7 +50,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         mainDisplayWidget = new QWidget(centralWidget);
         mainDisplayWidget->setObjectName(QStringLiteral("mainDisplayWidget"));
-        mainDisplayWidget->setGeometry(QRect(0, 0, 601, 581));
+        mainDisplayWidget->setGeometry(QRect(0, 0, 601, 561));
         mainDisplayWidget->setAutoFillBackground(false);
         mainDisplayWidget->setStyleSheet(QStringLiteral("background-color: rgb(85, 85, 225);"));
         MainWindow->setCentralWidget(centralWidget);
