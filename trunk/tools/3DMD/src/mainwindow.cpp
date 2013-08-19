@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "manager\RenderManager.h"
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -13,6 +15,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
 	m_displayWidget->setGeometry(0, 0, ui->mainDisplayWidget->width(), ui->mainDisplayWidget->height());
 
+	// init render manager
+	new RenderManager();
+	RenderManager::GetInstance()->initialize(m_displayWidget);
+
 	// connect mouse event
 	connect(m_displayWidget, SIGNAL(mousePress( QMouseEvent *)), this, SLOT(on_mousePress( QMouseEvent *)));
 	connect(m_displayWidget, SIGNAL(mouseMove( QMouseEvent *)), this, SLOT(on_mouseMove( QMouseEvent *)));
@@ -21,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+	RenderManager::FreeInstance();
 	delete m_displayWidget;
     delete ui;
 }

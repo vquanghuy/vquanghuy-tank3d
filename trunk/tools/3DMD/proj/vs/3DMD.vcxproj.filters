@@ -12,6 +12,9 @@
     <ClCompile Include="..\..\src\generated\moc_QIrrlichtWidget.cpp">
       <Filter>generated</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\manager\RenderManager.cpp">
+      <Filter>manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\mainwindow.h" />
@@ -21,6 +24,12 @@
     <ClInclude Include="..\..\src\custom_widget\QIrrlichtWidget.h">
       <Filter>custom_widget</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\manager\RenderManager.h">
+      <Filter>manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\Singleton.h">
+      <Filter>utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="generated">
@@ -28,6 +37,12 @@
     </Filter>
     <Filter Include="custom_widget">
       <UniqueIdentifier>{193b4fdc-a81f-4853-aa5d-ab7ad93216a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="manager">
+      <UniqueIdentifier>{6bb0a3db-6afe-4c77-a50d-853df8e353ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{cb3b93c5-4204-46c9-ba6f-e3a49c50dee8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
