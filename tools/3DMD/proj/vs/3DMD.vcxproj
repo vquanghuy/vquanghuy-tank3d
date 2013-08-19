@@ -47,7 +47,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(QTDIR)/5.1.0/msvc2012/include;$(QTDIR)/5.1.0/msvc2012/include/QtCore;$(QTDIR)/5.1.0/msvc2012/include/QtGui;$(QTDIR)/5.1.0/msvc2012/include/QtWidgets;$(ProjectDir)../../src/generated;$(ProjectDir)../../../../libs/irrlicht-1.8/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(QTDIR)/5.1.0/msvc2012/include;$(QTDIR)/5.1.0/msvc2012/include/QtCore;$(QTDIR)/5.1.0/msvc2012/include/QtGui;$(QTDIR)/5.1.0/msvc2012/include/QtWidgets;$(ProjectDir)../../../../libs/irrlicht-1.8/include;$(ProjectDir)../../../../libs/boost_lib;$(ProjectDir)../../src/generated;$(ProjectDir)../../src</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);QT_THREAD_SUPPORT;QT_CORE_LIB;QT_GUI_LIB</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -94,11 +94,14 @@
     <ClCompile Include="..\..\src\generated\moc_QIrrlichtWidget.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\mainwindow.cpp" />
+    <ClCompile Include="..\..\src\manager\RenderManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\custom_widget\QIrrlichtWidget.h" />
     <ClInclude Include="..\..\src\generated\ui_mainwindow.h" />
     <ClInclude Include="..\..\src\mainwindow.h" />
+    <ClInclude Include="..\..\src\manager\RenderManager.h" />
+    <ClInclude Include="..\..\src\utils\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
