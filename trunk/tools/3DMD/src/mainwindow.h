@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "custom_widget\QIrrlichtWidget.h"
+#include "scene\MainSceneNode.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +20,8 @@ public:
 private:
     Ui::MainWindow		*ui;
 	QIrrlichtWidget		*m_displayWidget;
+
+	MainSceneNode		*m_mainSceneNode;
 
 	/* ==========================
 	HANDLE EVENT FORM MAIN WINDOW

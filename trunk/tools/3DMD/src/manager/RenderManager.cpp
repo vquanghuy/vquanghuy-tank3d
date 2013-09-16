@@ -23,3 +23,10 @@ IrrlichtDevice* RenderManager::getIrrlichtDevice()
 {
 	return m_irrDevice;
 }
+
+void RenderManager::setClearColor(video::SColor clearColor)
+{
+	m_clearColor = clearColor;
+
+	m_qIrrWg->setClearColor(m_clearColor);
+}
