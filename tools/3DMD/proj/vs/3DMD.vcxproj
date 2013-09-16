@@ -95,12 +95,14 @@
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\mainwindow.cpp" />
     <ClCompile Include="..\..\src\manager\RenderManager.cpp" />
+    <ClCompile Include="..\..\src\scene\MainSceneNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\custom_widget\QIrrlichtWidget.h" />
     <ClInclude Include="..\..\src\generated\ui_mainwindow.h" />
     <ClInclude Include="..\..\src\mainwindow.h" />
     <ClInclude Include="..\..\src\manager\RenderManager.h" />
+    <ClInclude Include="..\..\src\scene\MainSceneNode.h" />
     <ClInclude Include="..\..\src\utils\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

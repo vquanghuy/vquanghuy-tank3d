@@ -3,6 +3,8 @@
 
 #include "manager\RenderManager.h"
 
+#include <qfiledialog.h>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -17,12 +19,18 @@ MainWindow::MainWindow(QWidget *parent) :
 
 	// init render manager
 	new RenderManager();
-	RenderManager::GetInstance()->initialize(m_displayWidget);
+
+	GET_RENDER_MANAGER->initialize(m_displayWidget);
+	GET_RENDER_MANAGER->setClearColor(video::SColor(255,100,101,140));
 
 	// connect mouse event
 	connect(m_displayWidget, SIGNAL(mousePress( QMouseEvent *)), this, SLOT(on_mousePress( QMouseEvent *)));
 	connect(m_displayWidget, SIGNAL(mouseMove( QMouseEvent *)), this, SLOT(on_mouseMove( QMouseEvent *)));
 	connect(m_displayWidget, SIGNAL(mouseRelease( QMouseEvent *)), this, SLOT(on_mouseRelease( QMouseEvent *)));
+
+	// add MainSceneNode
+	scene::ISceneManager *smgr = GET_RENDER_MANAGER->getIrrlichtDevice()->getSceneManager();
+	m_mainSceneNode = new MainSceneNode(smgr->getRootSceneNode(), smgr, 666);
 }
 
 MainWindow::~MainWindow()
@@ -47,7 +55,7 @@ void MainWindow::on_actionExit_triggered()
 
 void MainWindow::on_actionAdd_Model_triggered()
 {
-	
+	QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), "", tr("Files (*.*)"));
 }
 
 void MainWindow::on_mousePress( QMouseEvent *event )

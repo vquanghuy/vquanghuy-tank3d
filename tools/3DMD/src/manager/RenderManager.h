@@ -22,7 +22,11 @@ public:
 	~RenderManager();
 
 	bool				initialize(QIrrlichtWidget *widget);
-	IrrlichtDevice*		getIrrlichtDevice();	
+	IrrlichtDevice*		getIrrlichtDevice();
+
+	void				setClearColor(video::SColor clearColor);
 };
+
+#define GET_RENDER_MANAGER RenderManager::GetInstance()
 
 #endif
